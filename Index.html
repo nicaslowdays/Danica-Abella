@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danica Abella: Operations and Client Support Portfolio</title>
+<meta name="description" content="Operations and client support specialist. Subscription operations, collections, CRM records, and process documentation. Part-time, remote, overlapping US hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F8FAFC;
+    --surface: #FFFFFF;
+    --surface-hover: #F1F5F9;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    --border: #E2E8F0;
+    --border-accent: #CBD5E1;
+    --primary: #2563EB;
+    --primary-light: #EFF6FF;
+    --primary-border: #BFDBFE;
+    --accent: #D9705E;
+    --accent-bg: #FEF2F2;
+    --badge-bg: #E2E8F0;
+    --badge-text: #334155;
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.01);
+    --shadow-lg: 0 20px 30px -10px rgba(0,0,0,0.08);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #090D16;
+      --surface: #111827;
+      --surface-hover: #1F2937;
+      --text-primary: #F9FAFB;
+      --text-secondary: #9CA3AF;
+      --text-muted: #6B7280;
+      --border: #1F2937;
+      --border-accent: #374151;
+      --primary: #3B82F6;
+      --primary-light: rgba(59, 130, 246, 0.1);
+      --primary-border: rgba(59, 130, 246, 0.25);
+      --accent: #E57373;
+      --accent-bg: rgba(229, 115, 115, 0.1);
+      --badge-bg: #1F2937;
+      --badge-text: #D1D5DB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.4);
+      --shadow-lg: 0 20px 30px -10px rgba(0,0,0,0.5);
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+
+  .skip {
+    position: absolute; left: -9999px;
+    background: var(--surface); color: var(--text-primary);
+    padding: 10px 14px; z-index: 100; border-radius: var(--radius-md);
+  }
+  .skip:focus { left: 16px; top: 16px; }
+
+  /* ---------- Header Nav ---------- */
+  .masthead {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(248, 250, 252, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  @media (prefers-color-scheme: dark) {
+    .masthead { background: rgba(9, 13, 22, 0.82); }
+  }
+
+  .masthead-inner {
+    max-width: 68rem; margin: 0 auto;
+    padding: 0 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px; gap: 16px;
+  }
+  .wordmark {
+    font-weight: 800; font-size: 1.05rem;
+    letter-spacing: -0.02em;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .wordmark-dot {
+    width: 8px; height: 8px; background: var(--accent);
+    border-radius: 50%; display: inline-block;
+  }
+  .menu {
+    list-style: none; display: flex; gap: 22px;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .menu::-webkit-scrollbar { display: none; }
+  .menu a {
+    font-size: 0.86rem; font-weight: 600;
+    color: var(--text-secondary);
+    padding: 6px 0; transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .menu a:hover { color: var(--primary); }
+
+  /* ---------- Container ---------- */
+  .wrap { max-width: 68rem; margin: 0 auto; padding: 0 24px; }
+
+  section { padding: 64px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--primary);
+    background: var(--primary-light); border: 1px solid var(--primary-border);
+    padding: 4px 10px; border-radius: 20px; margin-bottom: 12px;
+  }
+
+  h2 {
+    font-size: 1.75rem; font-weight: 800;
+    letter-spacing: -0.03em; margin-bottom: 10px;
+    color: var(--text-primary);
+  }
+
+  .standfirst {
+    color: var(--text-secondary); font-size: 1.05rem;
+    max-width: 44rem; margin-bottom: 36px; line-height: 1.6;
+  }
+
+  /* ---------- Hero Section ---------- */
+  .hero { padding: 72px 0 64px; }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: start;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    font-weight: 800; letter-spacing: -0.04em;
+    line-height: 1.08; margin-bottom: 16px;
+  }
+  .role {
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--primary); margin-bottom: 24px;
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  }
+  .role-pill {
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 12px; border-radius: 20px; font-size: 0.85rem;
+    color: var(--text-secondary); font-weight: 500;
+  }
+  .hero p { color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 16px; }
+  .signature {
+    margin-top: 24px; padding: 16px 20px;
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-size: 1.02rem; font-weight: 600; color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* ---------- Ledger Cards Grid ---------- */
+  .ledger-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 24px;
+    box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: 16px;
+  }
+  .ledger-card-title {
+    font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--text-muted); border-bottom: 1px solid var(--border);
+    padding-bottom: 10px; margin-bottom: 4px;
+  }
+  .ledger-item { display: flex; flex-direction: column; gap: 2px; }
+  .ledger-key { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .ledger-val { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); }
+
+  /* ---------- Services Grid ---------- */
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 20px;
+  }
+  .service-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 24px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+  .service-card:hover {
+    transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--primary-border);
+  }
+  .service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; color: var(--text-primary); }
+  .service-card p { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 16px; }
+  .service-card .fit {
+    font-size: 0.85rem; padding: 10px 12px; background: var(--bg);
+    border-radius: var(--radius-md); border: 1px solid var(--border); color: var(--text-muted);
+  }
+  .service-card .fit b { color: var(--primary); font-weight: 700; }
+
+  /* ---------- Work Samples ---------- */
+  .notice {
+    background: var(--primary-light); border: 1px solid var(--primary-border);
+    border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 32px;
+    font-size: 0.95rem; color: var(--text-primary);
+  }
+  .samples-list { display: flex; flex-direction: column; gap: 24px; }
+  .sample-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm);
+    transition: border-color 0.2s; position: relative;
+  }
+  .sample-card:hover { border-color: var(--border-accent); }
+  .sample-header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  .sample-badge {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--primary); color: #FFF; font-weight: 800; font-size: 0.9rem;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .sample-card h3 { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em; }
+
+  .entries { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+  .entry-row {
+    display: grid; grid-template-columns: 8rem 1fr; gap: 16px;
+    padding-bottom: 8px; border-bottom: 1px dashed var(--border);
+  }
+  .entry-row:last-child { border-bottom: none; }
+  .entry-label { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+  .entry-value { font-size: 0.96rem; color: var(--text-primary); }
+  .highlight-badge {
+    display: inline-block; background: var(--accent-bg); color: var(--accent);
+    font-weight: 700; padding: 2px 8px; border-radius: 6px;
+  }
+  .sample-note {
+    background: var(--bg); border-left: 3px solid var(--primary);
+    padding: 10px 14px; border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-size: 0.88rem; color: var(--text-secondary);
+  }
+
+  /* ---------- Expertise Grid ---------- */
+  .expertise-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 24px;
+  }
+  .exp-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 24px;
+  }
+  .exp-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; color: var(--text-primary); }
+  .exp-card .lede { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px; font-style: italic; }
+  .exp-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .exp-card li {
+    font-size: 0.92rem; color: var(--text-secondary);
+    position: relative; padding-left: 18px;
+  }
+  .exp-card li::before {
+    content: "✓"; position: absolute; left: 0; top: 0;
+    color: var(--primary); font-weight: 800; font-size: 0.85rem;
+  }
+
+  /* ---------- History ---------- */
+  .history-timeline { display: flex; flex-direction: column; gap: 16px; }
+  .job-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 20px 24px;
+  }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+  .job-co { font-size: 1.1rem; font-weight: 800; color: var(--text-primary); }
+  .job-dates {
+    font-size: 0.82rem; font-weight: 600; color: var(--text-muted);
+    background: var(--bg); border: 1px solid var(--border); padding: 3px 10px; border-radius: 12px;
+  }
+  .job-role { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-top: 4px; }
+  .job-note { font-size: 0.9rem; color: var(--text-secondary); margin-top: 6px; }
+  .break-card {
+    background: var(--bg); border: 1px dashed var(--border-accent);
+    padding: 12px 18px; border-radius: var(--radius-md); font-size: 0.88rem; color: var(--text-muted);
+  }
+
+  /* ---------- Rates & Tools ---------- */
+  .duo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 24px; }
+  .panel-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 28px;
+  }
+  .panel-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .rate-figure { font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 8px; letter-spacing: -0.02em; }
+  .panel-card p { font-size: 0.94rem; color: var(--text-secondary); margin-bottom: 12px; }
+  .plain-list { list-style: none; margin: 12px 0; }
+  .plain-list li {
+    font-size: 0.92rem; padding: 6px 0; border-top: 1px solid var(--border);
+    color: var(--text-primary); font-weight: 500;
+  }
+
+  .tool-pills { display: flex; flex-direction: column; gap: 10px; }
+  .tool-item {
+    background: var(--bg); border: 1px solid var(--border);
+    padding: 10px 14px; border-radius: var(--radius-md);
+  }
+  .tool-item b { display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; }
+  .tool-item span { font-size: 0.92rem; font-weight: 600; color: var(--text-primary); }
+
+  .voice-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 14px; font-weight: 700; font-size: 0.9rem;
+    color: #FFF; background: var(--primary);
+    padding: 10px 18px; border-radius: var(--radius-md);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .voice-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+  /* ---------- How I Work ---------- */
+  .principles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 20px; }
+  .principle-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 20px;
+  }
+  .principle-card b { font-size: 0.98rem; font-weight: 700; color: var(--text-primary); display: block; margin-bottom: 6px; }
+  .principle-card p { font-size: 0.9rem; color: var(--text-secondary); margin-top: 0; }
+
+  /* ---------- Contact ---------- */
+  .contact-box {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-md);
+  }
+  .contact-links {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 16px; margin-top: 24px;
+  }
+  .contact-card {
+    background: var(--bg); border: 1px solid var(--border);
+    padding: 16px 20px; border-radius: var(--radius-md);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .contact-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+  .contact-card em { display: block; font-style: normal; font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--text-muted); }
+  .contact-card span { font-size: 1rem; font-weight: 700; color: var(--primary); }
+
+  footer {
+    padding: 40px 0 60px; text-align: center;
+    font-size: 0.85rem; color: var(--text-muted);
+  }
+
+  @media (max-width: 840px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .entry-row { grid-template-columns: 1fr; gap: 2px; }
+    h2 { font-size: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="#top">
+      <span class="wordmark-dot"></span> Danica Abella
+    </a>
+    <ul class="menu">
+      <li><a href="#help">How I Help</a></li>
+      <li><a href="#samples">Work Samples</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#history">Work History</a></li>
+      <li><a href="#rates">Rates & Tools</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="wrap" id="top">
+<main id="main">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <span class="section-tag">Operations & Client Support</span>
+        <h1>Danica Abella</h1>
+        <div class="role">
+          <span class="role-pill">Operations Specialist</span>
+          <span class="role-pill">Subscription Operations</span>
+          <span class="role-pill">Process Documentation</span>
+        </div>
+
+        <p>Eight years, five companies, one constant: I'm the person clients reach when something's wrong with their account, and the person the team escalates to when the first answer didn't work.</p>
+
+        <p>Broken bookings and post-stay complaints in travel, at-risk accounts in telecom, complex customer cases beyond an agent's scope, and most recently subscriptions and invoices in hospitality SaaS. I get it corrected in the system, then write down how, so the next person doesn't have to work it out again.</p>
+
+        <div class="signature">Steady support. Clean records. Processes that outlast the person who built them.</div>
+      </div>
+
+      <div class="ledger-card">
+        <div class="ledger-card-title">Quick Overview</div>
+        <div class="ledger-item">
+          <span class="ledger-key">Experience</span>
+          <span class="ledger-val">8+ years in customer support and operations</span>
+        </div>
+        <div class="ledger-item">
+          <span class="ledger-key">Industries</span>
+          <span class="ledger-val">Telecom, travel, finance, and hospitality SaaS</span>
+        </div>
+        <div class="ledger-item">
+          <span class="ledger-key">Core Skills</span>
+          <span class="ledger-val">Customer support, subscriptions & billing, collections, CRM, admin, documentation</span>
+        </div>
+        <div class="ledger-item">
+          <span class="ledger-key">Track Record</span>
+          <span class="ledger-val">Consistently top-scoring; recognized at 4 companies including Employee of the Month</span>
+        </div>
+        <div class="ledger-item">
+          <span class="ledger-key">Availability</span>
+          <span class="ledger-val">~20 hrs/week (US Eastern PM / US Pacific AM overlap)</span>
+        </div>
+        <div class="ledger-item">
+          <span class="ledger-key">Location</span>
+          <span class="ledger-val">Fully remote, Philippines (GMT+8)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How I Can Help ===== -->
+  <section id="help">
+    <span class="section-tag">Services</span>
+    <h2>How I Can Help</h2>
+    <p class="standfirst">I work as an embedded part of your team, not a project consultant. You get a dependable point of contact for a defined set of operations, and written documentation of everything I run, so nothing lives only in my head. I take on a set number of hours each week, currently around 20, agreed with you at the start so the scope matches the time.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div>
+          <h3>Customer Support Coverage</h3>
+          <p>Email and chat worked daily: triage, respond, and resolve. Complex cases investigated before escalating, and recurring issues flagged so they get fixed instead of re-answered.</p>
+        </div>
+        <div class="fit"><b>Good fit if:</b> your queue needs consistent daily attention rather than full-time cover.</div>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <h3>Subscription and Billing Records</h3>
+          <p>Subscriptions created and maintained as deals close, payments matched against records, invoice adjustments and credit notes, and contract-to-billing mismatches caught early.</p>
+        </div>
+        <div class="fit"><b>Good fit if:</b> subscriptions are set up by whoever's free, or invoices don't match the contract.</div>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <h3>Collections & Payment Follow-Up</h3>
+          <p>Overdue invoice follow-up that is tracked rather than ad hoc, payment arrangements agreed and documented, and invoice corrections that unblock a stalled payment.</p>
+        </div>
+        <div class="fit"><b>Good fit if:</b> overdue invoices are chased when someone remembers, or nobody owns following up.</div>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <h3>CRM and Data Hygiene</h3>
+          <p>Ongoing data entry and cleanup against clear standards, duplicates and gaps caught, recurring reports that stay current, and filing systems that stay organized.</p>
+        </div>
+        <div class="fit"><b>Good fit if:</b> reports don't reflect reality, or nobody can find last quarter's documents.</div>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <h3>Admin and Executive Support</h3>
+          <p>Calendar, inbox, and scheduling support, document preparation and templates, task tracking, and recurring operational work owned end to end.</p>
+        </div>
+        <div class="fit"><b>Good fit if:</b> leadership time is going to logistics instead of decisions.</div>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <h3>Documentation: Included, Not Extra</h3>
+          <p>Every engagement produces written process documentation: SOPs, help center articles, or internal guides, depending on what's useful. It's how work survives holidays and growth.</p>
+        </div>
+        <div class="fit"><b>Good fit if:</b> you need processes that outlast turnover and individual team members.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Work Samples ===== -->
+  <section id="samples">
+    <span class="section-tag">Case Studies</span>
+    <h2>Work Samples</h2>
+    <p class="standfirst">Six pieces of work showing how I approach operations problems: finding what's wrong in financial and customer data, cleaning up records, and writing down the processes that keep it from happening again.</p>
+
+    <div class="notice">
+      <strong>All samples use fabricated data.</strong> I don't publish client work, even anonymized, so every company name, figure, and record below is invented. The structure, formulas, and reasoning are the same as I'd apply to real work.
+    </div>
+
+    <div class="samples-list">
+      <div class="sample-card">
+        <div class="sample-header">
+          <div class="sample-badge">1</div>
+          <h3>Billing and Revenue Audits</h3>
+        </div>
+        <div class="entries">
+          <div class="entry-row"><div class="entry-label">Problem</div><div class="entry-value">Invoices and signed contracts quietly drifted apart over a year. The billing system configuration looked correct, but individual invoices went out wrong.</div></div>
+          <div class="entry-row"><div class="entry-label">Action</div><div class="entry-value">Audited 33 issued invoices line by line against contract terms, recalculating prorations, verifying price-change timing, and checking percentage-based charges.</div></div>
+          <div class="entry-row"><div class="entry-label">Result</div><div class="entry-value"><span class="highlight-badge">10 discrepancies, USD 2,430.73 net recoverable</span>. Identified 8 uncollected revenue issues including unapplied escalation clauses and unbilled booking overages.</div></div>
+        </div>
+        <div class="sample-note"><b>Worth noting:</b> the most expensive errors are definitional, for example a gross rather than net commission basis. Automated checks never catch that; only reading agreements against invoices does.</div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-header">
+          <div class="sample-badge">2</div>
+          <h3>Subscription Reconciliation</h3>
+        </div>
+        <div class="entries">
+          <div class="entry-row"><div class="entry-label">Problem</div><div class="entry-value">Monthly recurring revenue reports and contract records disagreed, and nobody had cross-checked them.</div></div>
+          <div class="entry-row"><div class="entry-label">Action</div><div class="entry-value">Built a formula-driven workbook matching 37 subscription records against contracts on price, frequency, currency, dates, and discounts.</div></div>
+          <div class="entry-row"><div class="entry-label">Result</div><div class="entry-value"><span class="highlight-badge">19 records flagged</span> across 8 discrepancy types, including active subscriptions with no contract and signed contracts never billed.</div></div>
+        </div>
+        <div class="sample-note"><b>Worth noting:</b> billing without a contract is a refund risk; a signed unbilled contract is uncollected revenue.</div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-header">
+          <div class="sample-badge">3</div>
+          <h3>CRM Cleanup (for Operations Teams)</h3>
+        </div>
+        <div class="entries">
+          <div class="entry-row"><div class="entry-label">Problem</div><div class="entry-value">Fragmented CRM data: duplicate companies, missing job titles, and inconsistent country names such as "UK", "GB", and "United Kingdom".</div></div>
+          <div class="entry-row"><div class="entry-label">Action</div><div class="entry-value">Profiled records, corrected data, produced an import-ready file with original values preserved, and built a full audit change log.</div></div>
+          <div class="entry-row"><div class="entry-label">Result</div><div class="entry-value"><span class="highlight-badge">39 field-level edits across 15 records</span> and 6 duplicate groups. Flagged plain-text credentials for escalation.</div></div>
+        </div>
+        <div class="sample-note"><b>Worth noting:</b> I never delete records. Duplicates are proposed for merge with client review before committing.</div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-header">
+          <div class="sample-badge">4</div>
+          <h3>Knowledge Base Restructure</h3>
+        </div>
+        <div class="entries">
+          <div class="entry-row"><div class="entry-label">Problem</div><div class="entry-value">34 pages in a flat list, with multiple conflicting versions of the same procedure, so staff asked in chat instead of searching.</div></div>
+          <div class="entry-row"><div class="entry-label">Action</div><div class="entry-value">Audited every page as keep, rewrite, or retire, restructured around questions people ask, and rewrote core procedures with named owners and review dates.</div></div>
+          <div class="entry-row"><div class="entry-label">Result</div><div class="entry-value"><span class="highlight-badge">9 duplicates resolved, 12 pages archived</span>, and plain-text credentials escalated for urgent removal.</div></div>
+        </div>
+        <div class="sample-note"><b>Worth noting:</b> documentation usually fails on missing thresholds, for example an approval limit nobody wrote down, not on writing quality.</div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-header">
+          <div class="sample-badge">5</div>
+          <h3>Knowledge Base Built From Scratch</h3>
+        </div>
+        <div class="entries">
+          <div class="entry-row"><div class="entry-label">Problem</div><div class="entry-value">A company running on informal knowledge, with an abandoned Notion workspace nobody used.</div></div>
+          <div class="entry-row"><div class="entry-label">Action</div><div class="entry-value">Built a three-level Notion structure organized by task, completed an ownership map, and populated critical operational procedures.</div></div>
+          <div class="entry-row"><div class="entry-label">Result</div><div class="entry-value"><span class="highlight-badge">3 of 10 mapped areas had no owner at all</span>: software renewals, equipment repairs, and client data requests.</div></div>
+        </div>
+        <div class="sample-note"><b>Worth noting:</b> an ownership map reveals operational gaps an organization didn't know it had.</div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-header">
+          <div class="sample-badge">6</div>
+          <h3>Process Documentation</h3>
+        </div>
+        <div class="entries">
+          <div class="entry-row"><div class="entry-label">Problem</div><div class="entry-value">Bug escalations depended entirely on one team member's knowledge, and stalled whenever they were away.</div></div>
+          <div class="entry-row"><div class="entry-label">Action</div><div class="entry-value">Used a six-prompt asynchronous framework to capture bullet fragments from the expert in about 25 minutes, then drafted step-by-step SOPs.</div></div>
+          <div class="entry-row"><div class="entry-label">Result</div><div class="entry-value">Numbered steps, 2 decision rules, 3 exceptions, a troubleshooting guide, and <span class="highlight-badge">4 unaddressed policy gaps surfaced</span>.</div></div>
+        </div>
+        <div class="sample-note"><b>Worth noting:</b> open questions surface undocumented policy decisions so leadership can define them.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Expertise ===== -->
+  <section id="expertise">
+    <span class="section-tag">Capabilities</span>
+    <h2>My Expertise</h2>
+    <p class="standfirst">Eight years of front-line and Tier 2 work across telecom, travel, finance, and SaaS, most recently in Intercom and email, previously phone and chat. In my last role I was the point of contact for around 20 colleagues with billing and account questions across teams.</p>
+
+    <div class="expertise-grid">
+      <div class="exp-card">
+        <h3>Client Support and Escalations</h3>
+        <ul>
+          <li>Take on Tier 2 cases beyond first-line scope, and support agents working through them</li>
+          <li>Investigate issues end to end and escalate with evidence rather than passing the problem along</li>
+          <li>Route what needs specialist input, and answer directly what falls in scope</li>
+          <li>Step in as point of contact when the team lead is out</li>
+          <li>Retention and save work: identifying at-risk accounts and talking them back from canceling</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <h3>Subscription & Billing Operations</h3>
+        <p class="lede">Owning the record: subscriptions, invoices, and credit notes stay accurate across systems.</p>
+        <ul>
+          <li>Create and maintain subscriptions in Chargebee</li>
+          <li>Reconcile received payments against subscription records</li>
+          <li>Adjust invoices and issue credit notes</li>
+          <li>Process card refunds; bank-transfer refunds route to finance</li>
+          <li>Keep contract data consistent across CRM and billing systems</li>
+          <li>Calculate commission-based billing against monthly revenue and reconcile thresholds</li>
+          <li>Redesigned partial-month subscription billing methods</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <h3>Collections & Accounts Receivable</h3>
+        <p class="lede">Getting money in without damaging the client relationship.</p>
+        <ul>
+          <li>Follow up on overdue invoices and track collection attempts</li>
+          <li>Negotiate installment arrangements and waiver terms on 5-figure balances</li>
+          <li>Reconcile received payments against billing records</li>
+          <li>Handle invoice entity changes and billing corrections that unblock payment</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <h3>CRM, Records, and Reporting</h3>
+        <p class="lede">Data your team trusts enough to make decisions from.</p>
+        <ul>
+          <li>Maintain clean, consistent client data in Salesforce</li>
+          <li>Audit contract records against billing data to catch mismatches early</li>
+          <li>Build reports and decks used by internal teams and clients</li>
+          <li>Reorganize shared drives and filing structures for findability</li>
+          <li>Support lead generation and data management work</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <h3>Admin & Executive Support</h3>
+        <p class="lede">The coordination layer so leadership focuses on strategy.</p>
+        <ul>
+          <li>Calendar and inbox coordination, document preparation</li>
+          <li>Report building in Google Sheets, PowerPoint, and Canva</li>
+          <li>Task and project tracking in Asana</li>
+          <li>Filing systems and document templates people can navigate</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <h3>Process Documentation</h3>
+        <p class="lede">Writing SOPs has been core to my work since 2019.</p>
+        <ul>
+          <li>SOPs and team process guides that standardize execution</li>
+          <li>Help center and knowledge base articles for client teams</li>
+          <li>Internal communication guides that shorten onboarding</li>
+          <li>Documentation of owned processes to ensure smooth handovers</li>
+          <li>Defined at-risk account tracking for consistent churn review</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Work History ===== -->
+  <section id="history">
+    <span class="section-tag">Career Journey</span>
+    <h2>Work History</h2>
+    <p class="standfirst">Proven experience across operations, billing, and Tier 2 client support.</p>
+
+    <div class="history-timeline">
+      <div class="job-card">
+        <div class="job-head">
+          <span class="job-co">Sophi Outsourcing</span>
+          <span class="job-dates">March 2023 – June 2026</span>
+        </div>
+        <div class="job-role">Account Support / Billing Support Specialist (May 2024 – June 2026)</div>
+        <div class="job-role">Travel Support Specialist (March 2023 – May 2024)</div>
+        <p class="job-note">Embedded with client teams in hospitality SaaS and travel.</p>
+      </div>
+
+      <div class="job-card">
+        <div class="job-head">
+          <span class="job-co">Ubiquity Global Services</span>
+          <span class="job-dates">May 2019 – April 2022</span>
+        </div>
+        <div class="job-role">Customer Service Representative, Tier 2 Point of Contact (July 2020 – July 2021)</div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-head">
+          <span class="job-co">Iqor Philippines</span>
+          <span class="job-dates">March 2017 – December 2017</span>
+        </div>
+        <p class="job-note">Basic technical support and device upgrades for a US telecom carrier.</p>
+      </div>
+
+      <div class="job-card">
+        <div class="job-head">
+          <span class="job-co">Transcom</span>
+          <span class="job-dates">May 2016 – February 2017</span>
+        </div>
+        <p class="job-note">Customer service and retention for a US cable and internet provider.</p>
+      </div>
+
+      <div class="job-card">
+        <div class="job-head">
+          <span class="job-co">Qualfon</span>
+          <span class="job-dates">September 2014 – February 2015</span>
+        </div>
+        <p class="job-note">Customer service and basic technical support for US prepaid mobile brands.</p>
+      </div>
+
+      <div class="break-card">
+        Note: The gaps between roles were dedicated career breaks for full-time family caregiving.
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Rate & Tools ===== -->
+  <section id="rates">
+    <span class="section-tag">Pricing & Stack</span>
+    <h2>My Rate and Tools</h2>
+    <p class="standfirst">What ongoing work costs, what one-off projects cover, and what software I use daily.</p>
+
+    <div class="duo-grid">
+      <div class="panel-card">
+        <h3>Embedded Support</h3>
+        <div class="rate-figure">From USD 10 / hr</div>
+        <p>Around 20 hours a week with hours agreed at the start. No minimum contract length; two weeks' notice either way.</p>
+        <p>Engagements usually start with one core area (like support coverage or billing records) and expand as needs evolve.</p>
+
+        <h3 style="margin-top:28px">One-Off Projects</h3>
+        <p>For targeted operational cleanups:</p>
+        <ul class="plain-list">
+          <li>Subscription and contract audit</li>
+          <li>Contract against billing check</li>
+          <li>CRM data cleanup</li>
+          <li>Process documentation & SOPs</li>
+          <li>Knowledge base restructure</li>
+        </ul>
+        <p style="margin-top:12px">Priced on scope and volume. Email me with your requirements for an honest quote.</p>
+      </div>
+
+      <div class="panel-card">
+        <h3>Tooling Stack</h3>
+        <div class="tool-pills">
+          <div class="tool-item"><b>Billing & Subscriptions</b><span>Chargebee, Exact</span></div>
+          <div class="tool-item"><b>CRM & Contracts</b><span>Salesforce, PandaDoc</span></div>
+          <div class="tool-item"><b>Customer Support</b><span>Intercom</span></div>
+          <div class="tool-item"><b>Documentation & Ops</b><span>Notion, Asana, Slack</span></div>
+          <div class="tool-item"><b>Email & Calendar</b><span>Gmail, Google Calendar, Outlook</span></div>
+          <div class="tool-item"><b>Reporting & Docs</b><span>Google Workspace, MS Office, Canva</span></div>
+        </div>
+
+        <h3 style="margin-top:28px">Voice Introduction</h3>
+        <p>Prefer to hear how I communicate before scheduling a call?</p>
+        <a class="voice-btn" href="https://voca.ro/12lxYMXDi2ur" target="_blank" rel="noopener">
+          ▶ Listen to my 1-min introduction
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How I Work ===== -->
+  <section id="work">
+    <span class="section-tag">Security & Principles</span>
+    <h2>How I Work</h2>
+    <p class="standfirst">How I handle access to your systems and maintain privacy with your records.</p>
+
+    <div class="principles-grid">
+      <div class="principle-card">
+        <b>Least Access Principle</b>
+        <p>For data work, I use exported records wherever possible. For Notion or workspace builds, I only request access to specific project pages—never full admin rights.</p>
+      </div>
+      <div class="principle-card">
+        <b>No Credentials Ever</b>
+        <p>I do not take shared passwords. Access is always granted via explicit user permissions that you can revoke with one click at any time.</p>
+      </div>
+      <div class="principle-card">
+        <b>Nothing Deleted</b>
+        <p>Superseded records and pages are archived with notes. Duplicates and structural changes are presented for approval before merging.</p>
+      </div>
+      <div class="principle-card">
+        <b>Findings, Not Opinions</b>
+        <p>Every audit figure traces back to raw data or contract clauses. Open questions are highlighted explicitly rather than filled in with guesses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact">
+    <div class="contact-box">
+      <span class="section-tag">Get In Touch</span>
+      <h2>Let's Talk</h2>
+      <p class="standfirst" style="margin-bottom:0">Email me describing the part of your operations that is currently most frustrating. I'll respond directly with an honest assessment of how I can help. No charge for initial calls.</p>
+
+      <div class="contact-links">
+        <a class="contact-card" href="mailto:danicaabella2017@gmail.com">
+          <em>Email Direct</em>
+          <span>danicaabella2017@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://wa.me/639085045530" target="_blank" rel="noopener">
+          <em>WhatsApp Message</em>
+          <span>+63 908 504 5530</span>
+        </a>
+        <a class="contact-card" href="https://linkedin.com/in/danicaabella07" target="_blank" rel="noopener">
+          <em>LinkedIn Profile</em>
+          <span>linkedin.com/in/danicaabella07</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Danica Abella &bull; Operations & Client Support Specialist
+</footer>
+
+</div>
+</body>
+</html>
